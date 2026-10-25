@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>我的爱好 - LittleMimiCHEN</title>
+    <style>
+        /* ===== 基础样式，和首页、关于我保持一致 ===== */
+        body { 
+            font-family: "Microsoft YaHei", sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center; 
+            background-color: #f4f4f9; 
+        }
+        
+        /* ===== 导航栏样式 ===== */
+        nav { 
+            background: #333; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 30px; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+        }
+        nav a:hover { color: #ffd700; }
+
+        /* ===== 内容框样式 ===== */
+        .content { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            text-align: left; 
+            line-height: 1.8; 
+        }
+        
+        h1, h2, h3 { color: #333; }
+        hr { border: 0; height: 1px; background: #eee; margin: 20px 0; }
+
+        /* ===== 爱好卡片样式 ===== */
+        .hobby-card {
+            background: #f8f9fa;
+            border-left: 5px solid #0366d6; /* 左边加条蓝线装饰 */
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.2s; /* 鼠标放上去会有微小浮动效果 */
+        }
+        .hobby-card:hover {
+            transform: translateX(5px); /* 鼠标放上去往右移一点点 */
+            background: #eef2f5;
+        }
+        .hobby-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 【相互交差的导航栏】 -->
+    <nav>
+        <a href="./index.html">🏠 首页</a>
+        <a href="./about.html">👤 关于我</a>
+        <a href="./hobby.html">🎮 我的爱好</a>
+    </nav>
+
+    <!-- 网页主体内容 -->
+    <div class="content">
+        <h1>🎮 我的爱好</h1>
+        <p>除了折腾电脑，我平时还喜欢做这些事情：</p>
+        <hr>
+
+        <!-- 爱好卡片 1 -->
+        <div class="hobby-card">
+            <h3>🎬 看电影</h3>
+            <p>我非常喜欢科幻和悬疑类的电影，比如《黑客帝国》系列。我也喜欢研究电影里的一些特效和脑洞大开的剧情。</p>
+        </div>
+
+        <!-- 爱好卡片 2 -->
+        <div class="hobby-card">
+            <h3>🎵 听音乐</h3>
+            <p>写代码或者做事情的时候，耳机里一定要有声音。我喜欢的音乐风格比较杂，从电子乐到流行歌都会听。</p>
+        </div>
+
+        <!-- 爱好卡片 3 -->
+        <div class="hobby-card">
+            <h3>💻 折腾数码产品</h3>
+            <p>喜欢研究各种软件、系统，偶尔也会自己动手拆装一下电脑硬件。遇到问题喜欢自己上网查资料解决。</p>
+        </div>
+
+        <!-- 爱好卡片 4（你可以自己加或删） -->
+        <div class="hobby-card">
+            <h3>🌍 探索新鲜事物</h3>
+            <p>比如今天，我就学会了怎么用 GitHub Pages 搭建一个属于自己的个人网站！</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
