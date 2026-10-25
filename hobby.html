@@ -60,9 +60,20 @@
             margin-bottom: 10px;
         }
     </style>
+    /* ===== 右上角小校徽样式 ===== */
+.corner-logo {
+    position: fixed;       /* 固定在屏幕上，不随网页滚动 */
+    top: 20px;             /* 距离顶部 20 像素 */
+    right: 20px;           /* 距离右侧 20 像素 */
+    width: 45px;           /* 尺寸超小（你可以改大改小） */
+    height: auto;          /* 保持原图比例 */
+    z-index: 999;          /* 确保不被其他东西挡住 */
+    opacity: 0.8;          /* 加一点点透明度，显得更高级 */
+}
 </head>
 <body>
-
+<!-- 右上角超小校徽 -->
+<img src="./school-logo.png" class="corner-logo" alt="校徽">
     <!-- 【相互交差的导航栏】 -->
     <nav>
         <a href="./index.html">🏠 首页</a>
@@ -85,7 +96,7 @@
         <!-- 爱好卡片 2 -->
         <div class="hobby-card">
             <h3>🎵 听音乐</h3>
-            <p>写代码或者做事情的时候，耳机里一定要有声音。我喜欢的音乐风格比较杂，从电子乐到流行歌都会听。很喜欢“delature”的游戏音乐，比如《Flowery man》</p>
+            <p>写代码或者做事情的时候，耳机里一定要有声音。我喜欢的音乐风格比较杂，从电子乐到流行歌都会听。很喜欢“delature”的游戏音乐，比如《Flowery man》。</p>
         </div>
 
         <!-- 爱好卡片 3 -->
