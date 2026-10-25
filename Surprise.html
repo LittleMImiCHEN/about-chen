@@ -4,33 +4,19 @@
     <meta charset="utf-8">
     <title>惊喜 - LittleMimiCHEN</title>
     <style>
-        /* 1. 网页基础设置：黑底、消除边距、内容完全居中 */
+        /* 1. 网页全屏、居中、深色背景 */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: #000; /* 纯黑背景 */
-            display: flex;          /* 开启弹性布局 */
-            justify-content: center;/* 水平居中 */
-            align-items: center;    /* 垂直居中 */
+            background-color: #1a1a1a; /* 深灰色背景，比纯黑好看 */
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;     /* 垂直居中 */
         }
-
-        /* 2. 控制 GIF 的大小和样式 */
-        .center-gif {
-            /* 宽度占屏幕的 70%，最大不超过 500px。
-               手机上看就是屏幕70%大小，电脑上看最大500px。 */
-            width: 30%; 
-            max-width: 200px; 
-            
-            /* 高度自动按比例缩放，不会变形 */
-            height: auto; 
-            
-            border-radius: 15px; /* 圆角 */
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); /* 加一点白色发光阴影，很酷 */
-        }
-
-        /* 3. 左上角“返回首页”按钮样式 */
+        
+        /* 2. 左上角返回按钮 */
         .back-btn {
             position: absolute;
             top: 20px;
@@ -51,15 +37,22 @@
             background: rgba(255, 255, 255, 0.8);
             color: black;
         }
+
+        /* 3. 图片样式（死锁150px大小） */
+        .center-gif {
+            width: 150px !important; /* 强制锁死宽度 */
+            height: auto !important;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* 一点发光阴影 */
+        }
     </style>
 </head>
 <body>
 
-    <!-- 返回首页按钮 -->
+    <!-- 返回按钮 -->
     <a href="./index.html" class="back-btn">⬅️ 返回首页</a>
 
-    <!-- 居中的 GIF 动图 -->
-    <!-- 代码里的名字依然是你之前传的 videogif.gif -->
+    <!-- 居中的图片（代码里用的是 videogif.gif） -->
     <img src="./videogif.gif" class="center-gif" alt="惊喜动图">
 
 </body>
