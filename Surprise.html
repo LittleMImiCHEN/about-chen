@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>惊喜 - LittleMimiCHEN</title>
     <style>
-        /* 1. 网页全屏、居中、深色背景 */
+        /* 1. 网页全屏、居中、深灰色背景 */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: #1a1a1a; /* 深灰色背景，比纯黑好看 */
+            background-color: #1a1a1a; 
             display: flex;
             justify-content: center; /* 水平居中 */
             align-items: center;     /* 垂直居中 */
@@ -30,7 +30,6 @@
             font-weight: bold;
             backdrop-filter: blur(5px);
             z-index: 999;
-            transition: 0.3s;
         }
         
         .back-btn:hover {
@@ -38,12 +37,12 @@
             color: black;
         }
 
-        /* 3. 图片样式（死锁150px大小） */
-        .center-gif {
-            width: 150px !important; /* 强制锁死宽度 */
+        /* 3. 媒体样式（强制锁死大小为 200px，如果你觉得大可以改成 150px） */
+        .center-media {
+            width: 200px !important; 
             height: auto !important;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* 一点发光阴影 */
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -52,8 +51,13 @@
     <!-- 返回按钮 -->
     <a href="./index.html" class="back-btn">⬅️ 返回首页</a>
 
-    <!-- 居中的图片（代码里用的是 videogif.gif） -->
-    <img src="./videogif.gif" class="center-gif" alt="惊喜动图">
+    <!-- 👇👇👇 这里是核心，二选一 👇👇👇 -->
+
+    <!-- 【选项 A】如果你用的是真正的动图，用这行 -->
+    <img src="./demo.gif" class="center-media" alt="惊喜动图">
+
+    <!-- 【选项 B】如果你用的是 MP4 视频，用这行（把上面那行删掉，解除这行的注释） -->
+    <!-- <video src="./demo.mp4" class="center-media" autoplay loop muted playsinline></video> -->
 
 </body>
 </html>
