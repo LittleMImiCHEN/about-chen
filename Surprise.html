@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>全屏视频 - LittleMimiCHEN</title>
+    <style>
+        /* 1. 清除网页默认的边距，隐藏滚动条 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* 禁止上下滑动 */
+            background-color: #000; /* 背景设为纯黑，视频没加载出来时也不刺眼 */
+        }
+        
+        /* 2. 让视频强制铺满整个屏幕 */
+        .fullscreen-video {
+            width: 100vw;  /* 宽度占满屏幕可视区域 */
+            height: 100vh; /* 高度占满屏幕可视区域 */
+            object-fit: cover; /* 核心魔法：保证视频按比例填满屏幕，不会被拉伸变形 */
+        }
+        
+        /* 3. 给左上角加一个“返回首页”的浮动按钮 */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: "Microsoft YaHei", sans-serif;
+            font-weight: bold;
+            backdrop-filter: blur(5px); /* 毛玻璃特效，很高级 */
+            z-index: 999;
+            transition: 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 返回按钮，点击回到主页 -->
+    <a href="./index.html" class="back-btn">⬅️ 返回首页</a>
+
+    <!-- 全屏视频 -->
+    <!-- 记得确认你的视频名字是不是 short.mp4 -->
+    <video src="./video.mp4" class="fullscreen-video" autoplay loop muted playsinline></video>
+
+</body>
+</html>
