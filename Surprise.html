@@ -2,40 +2,48 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title>全屏惊喜 - LittleMimiCHEN</title>
+    <title>惊喜 - LittleMimiCHEN</title>
     <style>
-        /* 1. 清除网页默认边距，隐藏滚动条 */
+        /* 1. 网页基础设置：黑底、消除边距、内容完全居中 */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* 禁止滚动，保证全屏体验 */
-            background-color: #000; /* 黑色背景 */
+            background-color: #000; /* 纯黑背景 */
+            display: flex;          /* 开启弹性布局 */
+            justify-content: center;/* 水平居中 */
+            align-items: center;    /* 垂直居中 */
         }
-        
-        /* 2. 让 GIF 铺满全屏且不变形 */
-        .fullscreen-gif {
-            width: 100vw;  /* 铺满可视宽度 */
-            height: 100vh; /* 铺满可视高度 */
-            object-fit: cover; /* 核心魔法：等比例缩放填满屏幕，多余的边缘会被裁掉，不会拉伸变形 */
-            display: block;
+
+        /* 2. 控制 GIF 的大小和样式 */
+        .center-gif {
+            /* 宽度占屏幕的 70%，最大不超过 500px。
+               手机上看就是屏幕70%大小，电脑上看最大500px。 */
+            width: 70%; 
+            max-width: 500px; 
+            
+            /* 高度自动按比例缩放，不会变形 */
+            height: auto; 
+            
+            border-radius: 15px; /* 圆角 */
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); /* 加一点白色发光阴影，很酷 */
         }
-        
+
         /* 3. 左上角“返回首页”按钮样式 */
         .back-btn {
             position: absolute;
             top: 20px;
             left: 20px;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.3); /* 半透明背景 */
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-family: "Microsoft YaHei", sans-serif;
             font-weight: bold;
-            backdrop-filter: blur(5px); /* 毛玻璃特效 */
-            z-index: 999; /* 保证按钮浮在 GIF 上面 */
+            backdrop-filter: blur(5px);
+            z-index: 999;
             transition: 0.3s;
         }
         
@@ -50,9 +58,9 @@
     <!-- 返回首页按钮 -->
     <a href="./index.html" class="back-btn">⬅️ 返回首页</a>
 
-    <!-- 全屏 GIF 图片 -->
-    <!-- ⚠️ 注意：这里的名字必须是 video.gif，且必须和仓库里的文件同名 -->
-    <img src="./videogif.gif" class="fullscreen-gif" alt="全屏动图">
+    <!-- 居中的 GIF 动图 -->
+    <!-- 代码里的名字依然是你之前传的 videogif.gif -->
+    <img src="./videogif.gif" class="center-gif" alt="惊喜动图">
 
 </body>
 </html>
